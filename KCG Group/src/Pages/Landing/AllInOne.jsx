@@ -5,14 +5,15 @@ import Button from "../../Components/Button";
 import { FaQuoteLeft } from "react-icons/fa";
 import ImageComponent from "../../Components/ImageComponent";
 
-const SectionOne = () => {
+const AllInOne = () => {
   return (
     <Box sx={{ backgroundColor: "#fed600" }}>
       <Container sx={{ padding: "100px 0" }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{padding: "0 60px"}}>
           <Grid
-            xs={7}
-            sx={{ padding: "0 90px", borderRight: "1px dashed #d0b31c" }}
+            xs={12}
+            md={7}
+            sx={{  borderRight: "1px dashed #d0b31c", textAlign: { xs: "center", md: "left" }, }}
           >
             <Typography
               variant="p"
@@ -49,20 +50,20 @@ const SectionOne = () => {
             />
           </Grid>
 
-          <Grid xs={5} sx={{ display: "flex", flexFlow: "column" }}>
-            <Box sx={{ width: "90%", marginLeft: "20%" }}>
+          <Grid xs={12} md={5} sx={{ display: "flex", flexFlow: "column", marginTop: { xs: "2rem", md: "0" } }}>
+            <Box sx={{ marginLeft: {md:"20%", xs:"0"} }}>
               <Box
                 sx={{
                   width: 45,
                   height: 45,
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: { xs: "center", md: "left" },
                   borderRadius: "50%",
                   backgroundColor: "#000",
                   color: "#fff",
                   fontSize: "18px",
-                  marginBottom: "2rem",
+                  marginBottom: "2rem", 
                 }}
               >
                 <FaQuoteLeft />
@@ -70,7 +71,7 @@ const SectionOne = () => {
               <Typography
                 variant="p"
                 sx={{
-                  fontSize: "1.5rem",
+                  fontSize: {md:"1.5rem", xs:"1.2rem"},
                   fontWeight: "100",
                   lineHeight: "1.4",
                 }}
@@ -81,11 +82,12 @@ const SectionOne = () => {
             </Box>
             <Box
               sx={{
-                marginLeft: "20%",
+                marginLeft: {md:"20%", xs:"0"},
                 marginTop: "2rem",
                 display: "flex",
                 alignItems: "center",
                 gap: "2rem",
+                flexDirection: { xs: "column", md: "row" },
               }}
             >
               <ImageComponent
@@ -96,7 +98,7 @@ const SectionOne = () => {
                 height="6rem"
               />
               <Box sx={{width: "100%"}}>
-                <Typography variant="p" sx={{ fontSize: "1.2rem" }}>
+                <Typography variant="p" sx={{ fontSize: "1.2rem", textAlign: {md:"left", xs:"center"} }}>
                   Prakarsh Gagdani
                 </Typography>
                 <Typography>
@@ -111,4 +113,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default AllInOne;

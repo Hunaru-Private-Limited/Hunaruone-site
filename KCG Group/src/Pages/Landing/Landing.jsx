@@ -3,13 +3,12 @@ import { Box } from "@mui/material";
 import Navigation from "../../Components/Navigation"; 
 import Banner from "./Banner"; 
 import Footer from "../../Components/Footer";
-import SectionOne from "./SectionOne";
+import AllInOne from "./AllInOne";
 import BrandsBanner from "./BrandsBanner";
 import Enterprise from "./Enterprise";
-import SectionSix from "./SectionSix";
-import SectionSeven from "./SectionSeven";
-import SectionNine from "./SectionNine";
-import SectionEight from "./SectionEight";
+import MadeIn from "./MadeIn";
+import Privacy from "./Privacy";
+import CoreValues from "./CoreValues";
 
 const Landing = () => {
   return (
@@ -18,13 +17,12 @@ const Landing = () => {
       <Box sx={{padding: "180px 0 0 0", backgroundColor: "#f8f9fb"}}>
         <Banner/>
       </Box> 
-      <SectionOne/>
+      <AllInOne/>
       <BrandsBanner/>
       <Enterprise/>
-      <SectionSix/>
-      <SectionSeven/>
-      <SectionEight/>
-      <SectionNine/>
+      <MadeIn/>
+      <Privacy/>
+      <CoreValues/>
       <Footer/>
     </>
   );

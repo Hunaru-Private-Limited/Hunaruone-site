@@ -28,7 +28,7 @@ const Footer = () => {
         backgroundColor: "#f3f5f9",
       }}
     >
-      <Container sx={{ padding: "100px 0" }}>
+      <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
         <Box sx={{ textAlign: "center" }}> 
           <Typography variant="h5" sx={{marginBottom: "1rem"}}>Ready to do your best work?</Typography>
           <Typography variant="h6" sx={{marginBottom: "1rem"}}>Let's get you started.</Typography>
@@ -42,7 +42,7 @@ const Footer = () => {
 
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={6} md={4} lg={3}>
               <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                 Apps and Extensions
               </Typography>
@@ -51,35 +51,29 @@ const Footer = () => {
                   <ListItemText primary="Mobile Apps" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Desktop Apps" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Developer Center" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Google Workspace Integration" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Microsoft 365 Integration" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Apps for Apple Watch" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Product Integrations" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Mobile Apps" />
+                  <ListItemText primary="Browser Extensions" />
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid item xs={6} md={4} lg={2}>
               <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                 Learn
               </Typography>
@@ -88,35 +82,26 @@ const Footer = () => {
                   <ListItemText primary="Training & Certification" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="Academy" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="Blog" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="Knowledge Base" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="Zia" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="The Long Game" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Training & Certification" />
+                  <ListItemText primary="Newsletter" />
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={6} md={4} lg={3}>
               <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                 Community
               </Typography>
@@ -125,35 +110,26 @@ const Footer = () => {
                   <ListItemText primary="User Community" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Customer Stories" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Influence" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Find a Partner" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Zoho for Startups" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Affiliate Program" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="User Community" />
+                  <ListItemText primary="Humans of Zoho" />
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid item xs={6} md={4} lg={2}>
               <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                 Company
               </Typography>
@@ -162,35 +138,29 @@ const Footer = () => {
                   <ListItemText primary="About Us" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Press" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Events" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Newsroom" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Branding Assets" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Zoho Schools" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Service Status" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary="Careers" />
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid item xs={6} md={4} lg={2}>
               <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                 Contact Sales
               </Typography>
@@ -199,31 +169,16 @@ const Footer = () => {
                   <ListItemText primary="Phone" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
+                  <ListItemText primary="1800 103 1123" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
+                  <ListItemText primary="1800 572 3535" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
+                  <ListItemText primary="Email" />
                 </ListItem>
                 <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
-                </ListItem>
-                <ListItem sx={{ padding: "0" }}>
-                  <ListItemText primary="Phone" />
+                  <ListItemText primary="sales@zohocorp.com" />
                 </ListItem>
               </List>
             </Grid>

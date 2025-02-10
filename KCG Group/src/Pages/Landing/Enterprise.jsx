@@ -8,9 +8,9 @@ import { RiArrowRightSLine } from "react-icons/ri";
 const Enterprise = () => {
   return (
     <Box>
-      <Container sx={{ padding: "100px 0" }}>
+      <Container sx={{ padding: "0 100px" }}>
         <Grid container spacing={2} sx={{alignItems: "center"}}>
-          <Grid xs={6}>
+          <Grid xs={12} md={6} sx={{order: {md:1, xs:2}, marginTop: {md:"0", xs:"4rem"}, textAlign: {md:"left", xs:"center"}}}>
             <ImageComponent
               src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-enterprise-illus.svg"
               alt="Enterprise image"
@@ -36,7 +36,7 @@ const Enterprise = () => {
               <FaQuoteLeft />
             </Box>
 
-            <Box sx={{ display: "flex", padding: "0 0 30px 60px"}}>
+            <Box sx={{ display: "flex", flexDirection: {xs:"column", md: "row"}}}>
               <Box>
                 <Typography
                   variant="p"
@@ -61,7 +61,7 @@ const Enterprise = () => {
                 </Box>
               </Box>
 
-              <Box sx={{ width: "100%" }}>
+              <Box sx={{ width: "100%", marginTop: {xs:"2rem", md: 0} }}>
                 <ImageComponent
                   src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-video-poster-prakash.png"
                   alt="Banner image"
@@ -82,7 +82,7 @@ const Enterprise = () => {
             </Box>
           </Grid>
 
-          <Grid xs={6} sx={{paddingLeft: "60px", width: "50%"}}>
+          <Grid xs={12} md={6} sx={{paddingLeft: "60px", width: {md:"50%", xs:"100%"}, order: {md:2, xs:1}, textAlign: {md:"left", xs:"center"}}}>
             <Box>
               <ImageComponent
                 src="https://www.zohowebstatic.com/sites/zweb/images/producticon/enterprise-en-in.svg"

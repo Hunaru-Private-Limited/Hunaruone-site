@@ -7,15 +7,16 @@ import {
   FaApple,
   FaGithub,
 } from "react-icons/fa";
-import { TextField, Grid, Typography, Box } from "@mui/material";
+import { TextField, Grid, Typography, Box, useMediaQuery } from "@mui/material";
 import ImageComponent from "../../Components/ImageComponent";
 import Button from "../../Components/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Import Swiper CSS
+import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const SignIn = () => {
+
   return (
     <Grid
       container
@@ -28,7 +29,9 @@ const SignIn = () => {
         container
         item
         xs={12}
-        md={8}
+        sm={10}
+        md={9}
+        lg={7}
         component="main"
         sx={{ backgroundColor: "white", borderRadius: 2, boxShadow: 3 }}
       >
@@ -38,7 +41,7 @@ const SignIn = () => {
           xs={12}
           md={7}
           p={4}
-          sx={{ borderRight: "2px solid #f1f1f1" }}
+          sx={{ borderRight: { md: "2px solid #f1f1f1", sm: "none" }, }}
         >
           <ImageComponent
             src="/images/logo.png"
@@ -77,28 +80,32 @@ const SignIn = () => {
           >
             Sign in using
           </Typography>
-          <Grid container justifyContent="center" spacing={1}>
+          <Grid container spacing={1}>
             <Grid item>
               <Button
                 backgroundColor="#F2F2F2"
+                padding="10px"
                 icon={<FaGoogle size={20} style={{ color: "#1E88E5" }} />}
               />
             </Grid>
             <Grid item>
               <Button
                 backgroundColor="#1877F2"
+                padding="10px"
                 icon={<FaFacebookF size={20} style={{ color: "#fff" }} />}
               />
             </Grid>
             <Grid item>
               <Button
                 backgroundColor="#0867c2"
+                padding="10px"
                 icon={<FaLinkedinIn size={20} style={{ color: "#fff" }} />}
               />
             </Grid>
             <Grid item>
               <Button
                 backgroundColor="#439EF0"
+                padding="10px"
                 icon={<FaTwitter size={20} style={{ color: "#fff" }} />}
               />
             </Grid>
@@ -106,12 +113,14 @@ const SignIn = () => {
             <Grid item>
               <Button
                 backgroundColor="#000"
+                padding="10px"
                 icon={<FaApple size={20} style={{ color: "#fff" }} />}
               />
             </Grid>
             <Grid item>
               <Button
                 backgroundColor="#2F2F2F"
+                padding="10px"
                 icon={<FaGithub size={20} style={{ color: "#fff" }} />}
               />
             </Grid>
@@ -129,81 +138,80 @@ const SignIn = () => {
         </Grid>
 
         {/* Right Section - Illustration */}
-        <Grid
-          item
-          xs={12}
-          md={5}
-          sx={{
-            backgroundColor: "#fff",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: 4,
-          }}
-        >
-          {/* Swiper Carousel */}
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            autoplay={{ delay: 6000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            loop={true}
-            style={{ width: "100%", height: "100%" }}
+          <Grid
+            item
+            md={5}
+            sx={{
+              backgroundColor: "#fff",
+              display: {md:"flex", xs:"none"},
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: 4,
+            }}
           >
-            {/* Slide 1 */}
-            <SwiperSlide>
-              <Box textAlign="center">
-                <ImageComponent
-                  src="/images/social-thinking.png"
-                  alt="Security Illustration"
-                  width="200px"
-                  height="140px"
-                />
-                <Typography variant="h6" sx={{ mt: 2 }}>
-                  MFA for all accounts
-                </Typography>
-                <Typography sx={{ mt: 1, marginBottom:"2rem" }}>
-                  Secure online accounts with OneAuth 2FA. Back up OTP secrets
-                  and never lose access to your accounts.
-                </Typography>
-                <Button
-                  textColor="#0091FF"
-                  text="Learn More"
-                  backgroundColor="#ECF7FE"
-                  border="none"
-                  borderRadius="18px"
-                />
-              </Box>
-            </SwiperSlide>
+            {/* Swiper Carousel */}
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              autoplay={{ delay: 6000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              loop={true}
+              style={{ width: "100%", height: "100%" }}
+            >
+              {/* Slide 1 */}
+              <SwiperSlide>
+                <Box textAlign="center">
+                  <ImageComponent
+                    src="/images/social-thinking.png"
+                    alt="Security Illustration"
+                    width="200px"
+                    height="140px"
+                  />
+                  <Typography variant="h6" sx={{ mt: 2 }}>
+                    MFA for all accounts
+                  </Typography>
+                  <Typography sx={{ mt: 1, marginBottom: "2rem" }}>
+                    Secure online accounts with OneAuth 2FA. Back up OTP secrets
+                    and never lose access to your accounts.
+                  </Typography>
+                  <Button
+                    textColor="#0091FF"
+                    text="Learn More"
+                    backgroundColor="#ECF7FE"
+                    border="none"
+                    borderRadius="18px"
+                  />
+                </Box>
+              </SwiperSlide>
 
-            {/* Slide 2 */}
-            <SwiperSlide>
-              <Box textAlign="center">
-              <ImageComponent
-                  src="/images/fingerprint.png"
-                  alt="Security"
-                  width="200px"
-                  height="140px"
-                />
-                <Typography variant="h6" sx={{ mt: 2 }}>
-                  Passwordless sign-in
-                </Typography>
-                <Typography sx={{ mt: 1, marginBottom:"2rem" }}>
-                  Move away from risky passwords and experience one-tap access
-                  to Zoho. Download and install OneAuth.
-                </Typography>
-                <Button
-                  textColor="#0091FF"
-                  text="Learn More"
-                  backgroundColor="#ECF7FE"
-                  border="none"
-                  borderRadius="18px"
-                  style={{ marginTop:"2rem" }}
-                />
-              </Box>
-            </SwiperSlide>
-          </Swiper>
-        </Grid>
+              {/* Slide 2 */}
+              <SwiperSlide>
+                <Box textAlign="center">
+                  <ImageComponent
+                    src="/images/fingerprint.png"
+                    alt="Security"
+                    width="200px"
+                    height="140px"
+                  />
+                  <Typography variant="h6" sx={{ mt: 2 }}>
+                    Passwordless sign-in
+                  </Typography>
+                  <Typography sx={{ mt: 1, marginBottom: "2rem" }}>
+                    Move away from risky passwords and experience one-tap access
+                    to Zoho. Download and install OneAuth.
+                  </Typography>
+                  <Button
+                    textColor="#0091FF"
+                    text="Learn More"
+                    backgroundColor="#ECF7FE"
+                    border="none"
+                    borderRadius="18px"
+                    style={{ marginTop: "2rem" }}
+                  />
+                </Box>
+              </SwiperSlide>
+            </Swiper>
+          </Grid>
       </Grid>
     </Grid>
   );

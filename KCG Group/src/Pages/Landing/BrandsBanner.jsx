@@ -24,9 +24,11 @@ const BrandsBanner = () => {
         <ImageList
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: {md:"space-between", xs:"center"},
             flexWrap: "wrap",
-            marginBottom: "2rem"
+            marginBottom: "2rem",
+            padding: "20px 0",
+            gap: {md:"4px", xs:"40px !important"},
           }}
         >
           {imgData.map((images) => (
@@ -37,9 +39,10 @@ const BrandsBanner = () => {
                 alt={images.title}
                 loading="lazy"
                 style={{
-                  width: "120px",
+                  width: "110px",
                   height: "auto",
-                  objectFit: "contain"
+                  objectFit: "contain",
+                  maxWidth: "100%",
                 }}
               />
             </ImageListItem>

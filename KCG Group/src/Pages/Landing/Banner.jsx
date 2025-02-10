@@ -26,53 +26,57 @@ import { RiArrowRightSLine } from "react-icons/ri";
 const Banner = (props) => {
   return (
     <Container>
-        <Grid container spacing={2}>
-          <Grid xs={8}>
-            <Typography
-              variant="h1"
-              sx={{
-                lineHeight: 1.3,
-                whiteSpace: "pre-line",
-                fontSize: "3.1rem",
-                letterSpacing: "0.15rem",
+      <Grid container spacing={2} sx={{ display: { xs: 'flex'}, justifyContent: 'center', alignItems: 'center' }}>
+        <Grid xs={12} md={8} sx={{ marginBottom: "3rem" }}>
+          <Typography
+            variant="h1"
+            sx={{
+              lineHeight: 1.3,
+              whiteSpace: "pre-line",
+              fontSize: { md: "3.1rem", xs: "2rem" },
+              letterSpacing: "0.15rem",
+              textAlign: { xs: "center", md: "left" },
+            }}
+          >
+            Your life's work, {"\n"}
+            <span
+              style={{
+                // borderBottom: {xs:"none", md:"2px solid #f60014"},
+                paddingBottom: "2rem",
+                textAlign: { xs: "center", md: "left" },
               }}
             >
-              Your life's work, {"\n"}
-              <span
-                style={{
-                  borderBottom: "2px solid #f60014",
-                  paddingBottom: "2rem",
-                }}
-              >
-                p
-              </span>
-              owered by our life's work
-            </Typography>
+              p
+            </span>
+            owered by our life's work
+          </Typography>
 
-            <Typography
-              variant="h6"
-              sx={{ marginTop: "3rem", marginBottom: "2rem", fontSize: "1.5rem", lineHeight: "1.5" }}
-            >
-              A unique and powerful software suite to transform the way you
-              work. Designed for businesses of all sizes, built by a company
-              that values your privacy.
-            </Typography>
+          <Typography
+            variant="h6"
+            sx={{ marginTop: "3rem", marginBottom: "2rem", fontSize: { md: "1.5rem", xs: "1.3rem" }, lineHeight: "1.5", textAlign: { xs: "center", md: "left" } }}
+          >
+            A unique and powerful software suite to transform the way you
+            work. Designed for businesses of all sizes, built by a company
+            that values your privacy.
+          </Typography>
+          <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
             <Button
               backgroundColor="#f60014"
               text="GET STARTED FOR FREE"
               icon={<RiArrowRightSLine />}
             />
-            <Box>
-              <ImageComponent
-                src="../images/banner.png"
-                alt="Banner image"
-                width="100%"
-              />
-            </Box>
-          </Grid>
+          </Box>
+          <Box>
+            <ImageComponent
+              src="../images/banner.png"
+              alt="Banner image"
+              width="100%"
+            />
+          </Box>
+        </Grid>
 
-          <Grid xs={4}>
-            <Card variant="outlined" sx={{marginBottom: "100px"}}>
+        <Grid xs={12} md={4} >
+            <Card variant="outlined" sx={{ marginBottom: "100px", }}>
               <CardContent>
                 <List>
                   <Typography
@@ -135,8 +139,8 @@ const Banner = (props) => {
                 <RiArrowRightSLine />
               </CardActions>
             </Card>
-          </Grid>
         </Grid>
+      </Grid>
     </Container>
   );
 };
