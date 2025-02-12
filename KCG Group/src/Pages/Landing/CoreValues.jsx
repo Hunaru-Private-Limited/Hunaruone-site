@@ -22,14 +22,14 @@ const CoreValues = () => {
           backgroundColor: "#fff",
           padding: { xs: "50px 20px", sm: "60px 40px", md: "100px 100px" },
           position: "relative",
-          top: { xs: "-5rem", sm: "-10rem", md: "-15rem" },
+          top: { xs: "0rem", lg: "-15rem" },
           textAlign: "center",
         }}
       >
         {/* Title */}
         <Typography
           sx={{
-            padding: { xs: "0 10px", sm: "0 50px", md: "0 250px" },
+            padding: { xs: "0 10px", sm: "0 50px", md: "0 200px" },
             marginBottom: "3rem",
             fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.7rem" },
           }}

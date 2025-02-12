@@ -9,11 +9,11 @@ const AllInOne = () => {
   return (
     <Box sx={{ backgroundColor: "#fed600" }}>
       <Container sx={{ padding: "100px 0" }}>
-        <Grid container spacing={2} sx={{padding: "0 60px"}}>
+        <Grid container spacing={2} sx={{ padding: "0 60px" }}>
           <Grid
             xs={12}
             md={7}
-            sx={{  borderRight: "1px dashed #d0b31c", textAlign: { xs: "center", md: "left" }, }}
+            sx={{ borderRight: { md: "1px dashed #d0b31c", xs: "none" }, borderBottom: { xs: "1px dashed #d0b31c", md: "none" }, textAlign: { xs: "center", md: "left" }, }}
           >
             <Typography
               variant="p"
@@ -42,16 +42,18 @@ const AllInOne = () => {
               designed to help you break down silos between departments and
               increase organizational efficiency.
             </Typography>
-            <Button
-              backgroundColor="#f60014"
-              text="TRY NOW"
-              borderColor="#f60014"
-              icon={<RiArrowRightSLine />}
-            />
+            <Box sx={{ marginBottom: "2rem" }}>
+              <Button
+                backgroundColor="#f60014"
+                text="TRY NOW"
+                borderColor="#f60014"
+                icon={<RiArrowRightSLine />}
+              />
+            </Box>
           </Grid>
 
-          <Grid xs={12} md={5} sx={{ display: "flex", flexFlow: "column", marginTop: { xs: "2rem", md: "0" } }}>
-            <Box sx={{ marginLeft: {md:"20%", xs:"0"} }}>
+          <Grid xs={12} md={5} sx={{ display: "flex", flexFlow: "column", marginTop: { xs: "2rem", md: "0" }, textAlign: { xs: "center", md: "left" } }}>
+            <Box sx={{ marginLeft: { md: "20%", xs: "0" } }}>
               <Box
                 sx={{
                   width: 45,
@@ -63,7 +65,7 @@ const AllInOne = () => {
                   backgroundColor: "#000",
                   color: "#fff",
                   fontSize: "18px",
-                  marginBottom: "2rem", 
+                  marginBottom: "2rem",
                 }}
               >
                 <FaQuoteLeft />
@@ -71,7 +73,7 @@ const AllInOne = () => {
               <Typography
                 variant="p"
                 sx={{
-                  fontSize: {md:"1.5rem", xs:"1.2rem"},
+                  fontSize: { md: "1.5rem", xs: "1.2rem" },
                   fontWeight: "100",
                   lineHeight: "1.4",
                 }}
@@ -82,7 +84,7 @@ const AllInOne = () => {
             </Box>
             <Box
               sx={{
-                marginLeft: {md:"20%", xs:"0"},
+                marginLeft: { md: "20%", xs: "0" },
                 marginTop: "2rem",
                 display: "flex",
                 alignItems: "center",
@@ -97,8 +99,8 @@ const AllInOne = () => {
                 width="6rem"
                 height="6rem"
               />
-              <Box sx={{width: "100%"}}>
-                <Typography variant="p" sx={{ fontSize: "1.2rem", textAlign: {md:"left", xs:"center"} }}>
+              <Box sx={{ width: "100%" }}>
+                <Typography variant="p" sx={{ fontSize: "1.2rem", textAlign: { md: "left", xs: "center" } }}>
                   Prakarsh Gagdani
                 </Typography>
                 <Typography>

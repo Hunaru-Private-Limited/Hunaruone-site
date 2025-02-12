@@ -22,7 +22,7 @@ const MadeIn = () => {
       }}
     >
       <Container>
-        <Typography variant="h3" sx={{ textAlign: { md: "left", xs: "center" }, fontSize: { xs: "2.5rem" } }}>
+        <Typography variant="h3" sx={{ textAlign: { md: "left", xs: "center" }, fontSize: { xs: "2.5rem" }, marginBottom: "2rem" }}>
           Made in India. <br />
           Made for the World.
         </Typography>
